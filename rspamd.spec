@@ -1,5 +1,5 @@
 Name:             rspamd
-Version:          3.8.0
+Version:          3.8.1
 Release:          1%{?dist}
 Summary:          Rapid spam filtering system
 License:          ASL 2.0 and LGPLv3 and BSD and MIT and CC0 and zlib
@@ -10,7 +10,7 @@ Source2:          rspamd.service
 Source3:          rspamd.logrotate
 Source4:          rspamd.sysusers
 Source5:          rspamd.tmpfilesd
-Patch0:           rspamd-secure-ssl-ciphers.patch
+Patch0:           0001-fedora-ssl-use-system-profile.patch
 
 
 # see https://bugzilla.redhat.com/show_bug.cgi?id=2043092
@@ -216,6 +216,9 @@ install -Dpm 0644 LICENSE.md %{buildroot}%{_docdir}/licenses/LICENSE.md
 %dir %attr(0750,%{name},%{name}) %{_localstatedir}/log/%{name}
 
 %changelog
+* Wed Feb 07 2024 Ajay Ramaswamy <ajay@ramaswamy.net> - 3.8.1-1
+- update to 3.8.1
+
 * Sun Jan 21 2024 Ajay Ramaswamy <ajay@ramaswamy.net> - 3.8-1
 - update to 3.8
 
