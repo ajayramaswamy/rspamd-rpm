@@ -170,3 +170,8 @@ install -Dpm 0644 LICENSE.md %{buildroot}%{_docdir}/licenses/LICENSE.md
 
 %{_sysusersdir}/%{name}.conf
 %{_tmpfilesdir}/%{name}.conf
+
+%changelog
+* Fri Nov 29 2024 Ajay Ramaswamy
+- update 3.10.2
+
