@@ -1,5 +1,5 @@
 Name:             rspamd
-Version:          3.11.0
+Version:          3.11.1
 Release:          1%{?dist}
 Summary:          Rapid spam filtering system
 License:          ASL 2.0 and LGPLv3 and BSD and MIT and CC0 and zlib
@@ -172,6 +172,9 @@ install -Dpm 0644 LICENSE.md %{buildroot}%{_docdir}/licenses/LICENSE.md
 %{_tmpfilesdir}/%{name}.conf
 
 %changelog
+* Sun Mar 09 2025 Ajay Ramaswamy
+- update 3.11.1
+
 * Tue Dec 17 2024 Ajay Ramaswamy
 - update 3.11.0
 
