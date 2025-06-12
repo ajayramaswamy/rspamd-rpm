@@ -1,6 +1,6 @@
 Name:             rspamd
 Version:          3.11.1
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          Rapid spam filtering system
 License:          ASL 2.0 and LGPLv3 and BSD and MIT and CC0 and zlib
 URL:              https://www.rspamd.com/
@@ -96,7 +96,8 @@ rm -rf freebsd
   -DENABLE_LUAJIT=ON \
   -DENABLE_BLAS=ON \
   -DSYSTEM_ZSTD=ON \
-  -DENABLE_URL_INCLUDE=ON
+  -DENABLE_URL_INCLUDE=ON \
+  -DNO_TARGET_VERSIONS=ON
 
 %cmake_build
 
@@ -131,7 +132,6 @@ install -Dpm 0644 LICENSE.md %{buildroot}%{_docdir}/licenses/LICENSE.md
 %license %{_docdir}/licenses/LICENSE.md
 
 %{_bindir}/rspam{adm,c,d}
-%{_bindir}/rspam{adm,c,d}-%{version}
 %{_bindir}/rspamd_stats
 
 %dir %{_datadir}/%{name}
